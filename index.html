@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculateur de devis</title>
+  <style>
+    /* Styles CSS */
+  </style>
+</head>
+<body>
+  <h1>Calculateur de devis</h1>
+  <form id="calcul-form">
+    <label for="prix">Prix hors taxe :</label>
+    <input type="number" id="prix" required><br><br>
+    <label for="poids">Poids :</label>
+    <input type="number" id="poids" required><br><br>
+    <label for="commission">Commission :</label>
+    <select id="commission">
+      <option value="0.1">Matériel électronique (10%)</option>
+      <option value="20">Téléphone (+20€)</option>
+      <option value="0.05">Autres articles (5%)</option>
+    </select><br><br>
+    <button type="submit">Calculer</button>
+  </form>
+  <div id="result"></div>
+
+  <script>
+    // JavaScript
+    document.getElementById("calcul-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Empêche le rechargement de la page
+
+      // Récupération des valeurs entrées par l'utilisateur
+      var prixHorsTaxe = parseFloat(document.getElementById("prix").value);
+      var poids = parseFloat(document.getElementById("poids").value);
+      var commission = parseFloat(document.getElementById("commission").value);
+
+      // Calcul du montant total
+      var montantTotal = prixHorsTaxe * poids;
+
+      // Calcul de la commission
+      var commissionAmount;
+      if (commission === 20) {
+        commissionAmount = 20;
+      } else {
+        commissionAmount = prixHorsTaxe * commission;
+      }
+
+      // Calcul du montant total avec la commission
+      var montantTotalAvecCommission = montantTotal + commissionAmount;
+
+      // Affichage du résultat
+      var resultElement = document.getElementById("result");
+      resultElement.innerHTML = "Montant total : " + montantTotal.toFixed(2) + " €<br>";
+      resultElement.innerHTML += "Commission : " + commissionAmount.toFixed(2) + " €<br>";
+      resultElement.innerHTML += "Montant total avec commission : " + montantTotalAvecCommission.toFixed(2) + " €";
+    });
+  </script>
+</body>
+</html>
