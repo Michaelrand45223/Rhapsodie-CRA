@@ -1,58 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Calculateur de devis</title>
-  <style>
-    /* Styles CSS */
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+    <link rel="stylesheet" href="Accueil.css">
 </head>
+
+
 <body>
-  <h1>Calculateur de devis</h1>
-  <form id="calcul-form">
-    <label for="prix">Prix hors taxe :</label>
-    <input type="number" id="prix" required><br><br>
-    <label for="poids">Poids :</label>
-    <input type="number" id="poids" required><br><br>
-    <label for="commission">Commission :</label>
-    <select id="commission">
-      <option value="0.1">Matériel électronique (10%)</option>
-      <option value="20">Téléphone (+20€)</option>
-      <option value="0.05">Autres articles (5%)</option>
-    </select><br><br>
-    <button type="submit">Calculer</button>
-  </form>
-  <div id="result"></div>
+    <main>
+        <header>
+            <h2>RHAPSODIE C.R.A</h2>
+            <img src="Sources/Image/logo.jpg.png" alt="logo">
+        </header>
 
-  <script>
-    // JavaScript
-    document.getElementById("calcul-form").addEventListener("submit", function(event) {
-      event.preventDefault(); // Empêche le rechargement de la page
+        <nav class="nav">
+            <ul>
+                <li><a href="Accueil.html" id="Acceuil">Acceuil</a></li>
+                <li><a href="Tableaudebord.html" id="Tableau de bord">Tableau de bord</a></li>
+                <li><a href="listesdessalariés.html" id="Listes des salarié">Listes des salariés</a></li>
+                <li><a href="listesdesCRAreçu.html" id="Listes des C.R.A reçu">C.R.A reçu</a></li>
+                <li><a href="Connexion.html" id="Déconnexion">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </main>
+    <div class="politiqueetcondition"><a href="Conditiondutilisation.html">CONDITION D'UTILISATION</a>
+        <a href="Politiquedeconfidentialite.html">POLITIQUE DE CONFIDENTIALITE</a>
+        <a href="Contactez-nous.html">Contactez-Nous</a>
+    </div>
 
-      // Récupération des valeurs entrées par l'utilisateur
-      var prixHorsTaxe = parseFloat(document.getElementById("prix").value);
-      var poids = parseFloat(document.getElementById("poids").value);
-      var commission = parseFloat(document.getElementById("commission").value);
-
-      // Calcul du montant total
-      var montantTotal = prixHorsTaxe * poids;
-
-      // Calcul de la commission
-      var commissionAmount;
-      if (commission === 20) {
-        commissionAmount = 20;
-      } else {
-        commissionAmount = prixHorsTaxe * commission;
-      }
-
-      // Calcul du montant total avec la commission
-      var montantTotalAvecCommission = montantTotal + commissionAmount;
-
-      // Affichage du résultat
-      var resultElement = document.getElementById("result");
-      resultElement.innerHTML = "Montant total : " + montantTotal.toFixed(2) + " €<br>";
-      resultElement.innerHTML += "Commission : " + commissionAmount.toFixed(2) + " €<br>";
-      resultElement.innerHTML += "Montant total avec commission : " + montantTotalAvecCommission.toFixed(2) + " €";
-    });
-  </script>
 </body>
+<script src="Accueil.js"></script>
+
 </html>
