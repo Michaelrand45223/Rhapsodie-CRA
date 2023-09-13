@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listes des Salariés Rhapsodie</title>
+    <link rel="stylesheet" href="Tableaudebord.css">
+</head>
+<header>
+    <h2>RHAPSODIE C.R.A</h2>
+    <img src="Sources/Image/logo.jpg.png" alt="logo">
+</header>
+<br><br><br>
+
+<body>
+    <h1>Gestion des salariés</h1>
+
+    <form id="salaries-form">
+        <label for="prenom">Prénom:</label>
+        <input type="text" id="prenom" required>
+        <br><br>
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" required>
+        <br><br>
+
+        <label for="date-entree">Date d'entrée:</label>
+        <input type="date" id="date-entree" required>
+        <br><br>
+
+        <label for="date-sortie">Date de sortie prévue:</label>
+        <input type="date" id="date-sortie" required>
+        <br><br>
+
+        <label for="site">Site d'intervention:</label>
+        <select id="site" required>
+            <option value="">Sélectionner un site</option>
+            <option value="AEP">AEP</option>
+            <option value="AXA">AXA</option>
+            <option value="BPCE PAYEMENT">BPCE PAYEMENT</option>
+            <option value="CACIB">CACIB</option>
+            <option value="CONNECT">CONNECT</option>
+            <option value="MGP">MGP</option>
+            <option value="NAXITIS">NAXITIS</option>
+            <option value="SOCIETE GENERALE">SOCIETE GENERALE</option>
+        </select>
+        <br><br>
+
+        <label for="poste">Poste:</label>
+        <input type="text" id="poste" required>
+        <br><br>
+
+        <input type="submit" value="Ajouter" class="button">
+    </form>
+
+    <h2>Liste des salariés</h2>
+
+    <table id="salaries-table">
+        <thead>
+            <tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Date d'entrée</th>
+                <th>Date de sortie prévue</th>
+                <th>Site d'intervention</th>
+                <th>Poste</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="salaries-body">
+            <!-- Les salariés seront ajoutés dynamiquement ici -->
+        </tbody>
+    </table>
+    <br><br><br>
+    <div class="fond">
+        <p1>Condition générale</p1>
+        <p2>Politique de confidentialité</p2>
+        <p3>Nos contatactes</p3>
+    </div>
+    <script src="Tableaudebord.js"></script>
+</body>
+
+</html>

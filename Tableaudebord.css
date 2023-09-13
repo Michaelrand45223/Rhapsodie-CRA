@@ -1,0 +1,85 @@
+/* Styles pour le tableau */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Styles pour les boutons */
+.button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* Styles pour le tableau */
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+
+/* Styles pour les boutons */
+.button {
+    padding: 8px 16px;
+    background-color: #bcedf2c0;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+
+}
+
+.button:hover {
+    background-color: #4aadea;
+}
+
+body {
+    background-color: #f1afaf;
+}
+
+form {
+    display: flex;
+
+}
+
+.fond {
+    background-color: #fbf6f6fd;
+}
+
+p1 {
+    margin: 50px;
+}
+
+p2 {
+    margin: 50px;
+}
+
+p3 {
+    margin: 50px;
+}
